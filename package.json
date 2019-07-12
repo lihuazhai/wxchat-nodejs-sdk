@@ -1,0 +1,36 @@
+{
+  "name": "wxchat-nodejs-sdk",
+  "version": "1.0.0",
+  "description": "## 功能点 * H5微信登陆 * jssdk 初始化 * 微信图片上传 * 微信支付 * 分享",
+  "main": "wxchat.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lihuazhai/wxchat-lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lihuazhai/wxchat-lib/issues"
+  },
+  "homepage": "https://github.com/lihuazhai/wxchat-lib#readme",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
+    "memory-cache": "^0.2.0",
+    "node-sha1": "^1.0.1",
+    "request": "^2.88.0",
+    "sha1": "^1.1.1",
+    "xml2js": "^0.4.19",
+    "xmlreader": "^0.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
