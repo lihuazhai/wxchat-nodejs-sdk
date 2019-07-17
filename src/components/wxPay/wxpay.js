@@ -1,9 +1,9 @@
-const request = require('request');
+const request = require('./node_modules/request');
 //var xmlreader = require("");
 const fs = require("fs");
 const config = require('./wechat.cfg');
 const util = require('./util');
-var xml2jsparseString = require('xml2js').parseString;
+var xml2jsparseString = require('./node_modules/xml2js').parseString;
 
 var WxPay = {
     order: function ({ body, openid, out_trade_no, money, notify_url }) {

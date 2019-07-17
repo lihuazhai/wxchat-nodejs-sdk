@@ -1,4 +1,4 @@
-var xmlreader = require("xmlreader");
+var xmlreader = require("./node_modules/xmlreader");
 var fs = require("fs");
 var wxpay = {
     //把金额转为分

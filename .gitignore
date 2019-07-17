@@ -21,3 +21,5 @@ package-lock.json
 test
 temp
 .DS_Store
+
+*.cfg.js
