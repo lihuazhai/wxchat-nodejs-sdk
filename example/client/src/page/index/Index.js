@@ -25,7 +25,6 @@ export default class Index extends React.Component {
 
     takePicture = () => {
         wxJsSdk.takePicture();
-
     }
 
     render() {
@@ -40,7 +39,7 @@ export default class Index extends React.Component {
                 </ul>
                 <div>图片展示：</div>
                 <div id="imgShow">
-                    {/* {Array.isArray(imgList) && imgList.map(imgSrc => <img src={imgSrc} />)} */}
+                    {Array.isArray(imgList) && imgList.map(imgSrc => <img key={imgSrc} src={imgSrc} />)}
                 </div>
             </div>
         );

@@ -89,11 +89,11 @@ let getTicket = async function (appId, secret) {
  * @class WxchatSdk
  */
 class WxchatSdk {
-    constructor(appId) {
-        this.appId = appId || 'wxf4c64eee773f85f1';
-        this.mch_id = '1511690841';
-        this.secret = '3b23df57ba7c1bb7b88e5c54e7d6c3c9';
-        this.noncestr = 'Wm3WZYTPz0wzccnW';
+    constructor(appId, secret, mch_id) {
+        this.appId = appId;//AppID
+        this.secret = secret;//AppSecret
+        this.mch_id = mch_id || '';//和appid成对绑定的支付商户号，收款资金会进入该商户号
+        this.noncestr = 'Wm3WZYTPz0wzccnW';//随机生成的字符串
         this.cache_duration = 1000 * 60 * 60 * 2; //缓存时长为2小时
     }
 
@@ -158,7 +158,7 @@ class WxchatSdk {
                     access_token: access_token
                 });
             } else {
-                let {access_token} = await getAccessToken(this.appId, this.secret);
+                let { access_token } = await getAccessToken(this.appId, this.secret);
                 cache.put('access_token', access_token, this.cache_duration, function () {
                     //console.log('值已经过期了!')
                 });

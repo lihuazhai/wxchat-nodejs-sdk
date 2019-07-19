@@ -28,7 +28,7 @@ module.exports = {
         compress: true, //压缩
         proxy: {
             '/api': {
-                target: "http://127.0.0.1:3003",
+                target: "http://47.100.7.102:80",
                 changeOrigin: true
             }
         },

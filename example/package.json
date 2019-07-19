@@ -5,7 +5,7 @@
   "main": "client/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode development --progress --hot --config client/webpack.config.js",
+    "dev": "npm run server & webpack-dev-server --mode development --progress --hot --config client/webpack.config.js",
     "server": "nodemon server/app.js"
   },
   "author": "",

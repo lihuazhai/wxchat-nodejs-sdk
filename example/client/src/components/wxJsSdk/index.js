@@ -99,22 +99,22 @@ let init = (url) => {
  * 调起相册和拍照
 */
 function takePicture(params) {
-    console.log(wx);
-    // wx.chooseImage({
-    //     count: 8, // 张数， 默认9
-    //     sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-    //     sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-    //     success: function (res) {
-    //         var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片；
-    //         // wxuploadImage(localIds);//上传图片到微信服务器, 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片,同时设置state
-    //     },
-    //     fail: function (res) {
-    //         console.log('操作提示：fail', JSON.stringify(res));
-    //     },
-    //     complete: function () {
-    //         console.log('complete');
-    //     }
-    // });
+    wx.chooseImage({
+        count: 8, // 张数， 默认9
+        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+        success: function (res) {
+            let localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片；
+            console.log(localIds);
+            // wxuploadImage(localIds);//上传图片到微信服务器, 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片,同时设置state
+        },
+        fail: function (res) {
+            console.log('操作提示：fail', JSON.stringify(res));
+        },
+        complete: function () {
+            console.log('complete');
+        }
+    });
 }
 
 /**

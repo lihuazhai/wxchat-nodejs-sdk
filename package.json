@@ -1,6 +1,6 @@
 {
   "name": "wxchat-nodejs-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "## 功能点 * H5微信登陆 * jssdk 初始化 * 微信图片上传 * 微信支付 * 分享",
   "main": "./src/index.js",
   "directories": {

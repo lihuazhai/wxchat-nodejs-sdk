@@ -11,12 +11,9 @@ const WxchatSdk = require('../../../src');
 const wxSdk = new WxchatSdk();
 
 router.get('/getSign', async function (ctx, next) {
-    let pageUrl = ctx.query.url ;
-    console.log(pageUrl);
     try {
-        let pageUrl = ctx.query.url ;
-        console.log(pageUrl);
-        //const res = await takenServer.sign('http://zhuan.lihuazhai.com:3003/sell/add');
+        let pageUrl = ctx.query.url;
+        // console.log(pageUrl);
         const res = await wxSdk.getSign(pageUrl);
         ctx.response.type = 'json';
         ctx.body = { "succee": true, content: { ...res } };
