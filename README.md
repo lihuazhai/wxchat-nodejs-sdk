@@ -1,6 +1,9 @@
 # 微信开发 nodejs SDK（开发工具包）
+
 一个基于nodejs服务的快速开发工具库，提供了微信open api接口的封装.
 申请地址：https://mp.weixin.qq.com/ 
+
+## 依赖 jest 
 
 ## 功能
 * <s>jssdk 初始化</s>
@@ -21,14 +24,17 @@
 
 ## 组件使用
 
-1、 组件引入
+1、组件安装
+> npm i -S wxchat-nodejs-sdk
+
+2、数组引入
 
 ```javascript
 const WxchatSdk = require('wxchat-nodejs-sdk');
 const wxSdk = new WxchatSdk(AppID,AppSecret);
 //AppID,AppSecret替换为自己申请得到的值
 ```
-2、获取签名
+3、获取签名
 ```javascript
 router.get('/getSign', async function (ctx, next) {
     let pageUrl = ctx.query.url;
@@ -44,7 +50,7 @@ router.get('/getSign', async function (ctx, next) {
 });
 ```
 
-> 注意：pageUrl 是当前前端页面的url,（如：zhuan.liahuzahi.com/buy/ ）,非请求的API接口。
+> 注意：pageUrl 是当前前端页面的url,（如：zhuan.lihuazhai.com/buy/ ）,非请求的API接口。
 
 ## 联系我们
 

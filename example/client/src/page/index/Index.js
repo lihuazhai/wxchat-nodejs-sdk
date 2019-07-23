@@ -19,7 +19,7 @@ export default class Index extends React.Component {
         };
     }
     componentDidMount() {
-        wxJsSdk.init(location.href);//初始化
+        wxJsSdk.init(location.href, '/api/weixin/getSign');// 初始化，当前页面url，获取微信签名的url
         let vConsole = new VConsole();
     }
 

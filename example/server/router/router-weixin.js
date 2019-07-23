@@ -6,7 +6,7 @@ const Router = require('koa-router');
 const router = new Router();
 const sha1 = require('node-sha1');
 const xml2jsparseString = require('xml2js').parseString;
-const WxchatSdk = require('../../../src');
+const WxchatSdk = require('wxchat-nodejs-sdk');
 
 const wxSdk = new WxchatSdk();
 

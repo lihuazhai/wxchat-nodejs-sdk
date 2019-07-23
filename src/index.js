@@ -7,8 +7,6 @@ const querystring = require("querystring");
 const cache = require('memory-cache');
 const sha1 = require('sha1');
 
-// const wxpay = require('./components/wxPay/wxpay');
-
 // 常量
 const accessTokenUrl = 'https://api.weixin.qq.com/cgi-bin/token'; //获取access_token的地址
 const ticketUrl = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket'; //获取jsapi_ticket的地址
@@ -89,10 +87,10 @@ let getTicket = async function (appId, secret) {
  * @class WxchatSdk
  */
 class WxchatSdk {
-    constructor(appId, secret, mch_id) {
+    constructor(appId, secret) {
         this.appId = appId;//AppID
         this.secret = secret;//AppSecret
-        this.mch_id = mch_id || '';//和appid成对绑定的支付商户号，收款资金会进入该商户号
+        // this.mch_id = mch_id || '';//和appid成对绑定的支付商户号，收款资金会进入该商户号
         this.noncestr = 'Wm3WZYTPz0wzccnW';//随机生成的字符串
         this.cache_duration = 1000 * 60 * 60 * 2; //缓存时长为2小时
     }
